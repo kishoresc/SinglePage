@@ -1,0 +1,45 @@
+<h2 class="text-2xl font-extrabold text-gray-800 mb-4">🔥 Workout List</h2>
+  
+
+  
+<table mat-table [dataSource]="workoutList" 
+class="mat-elevation-z8 w-full rounded-xl overflow-hidden shadow-lg border border-pink-300">
+
+<ng-container matColumnDef="name">
+<th mat-header-cell *matHeaderCellDef class="border-b px-6 py-4 text-gray-800 bg-white odd:bg-yellow-50 even:bg-pink-50 hover:bg-orange-100 transition duration-300 font-semibold"> 
+  Name
+</th>
+<td mat-cell *matCellDef="let row" class="border-b px-6 py-4 text-gray-800 bg-white odd:bg-yellow-50 even:bg-pink-50 hover:bg-orange-100 transition duration-300 font-semibold"> 
+  {{ row.name }}
+</td>
+</ng-container>
+
+<ng-container matColumnDef="exercise">
+<th mat-header-cell *matHeaderCellDef class="border-b px-6 py-4 text-gray-800 bg-white odd:bg-yellow-50 even:bg-pink-50 hover:bg-orange-100 transition duration-300 font-semibold"> 
+  Exercise
+</th>
+<td mat-cell *matCellDef="let row" class="border-b px-6 py-4 text-gray-800 bg-white odd:bg-yellow-50 even:bg-pink-50 hover:bg-orange-100 transition duration-300 font-semibold"> 
+  {{ row.exercise }}
+</td>
+</ng-container>
+
+<ng-container matColumnDef="duration">
+<th mat-header-cell *matHeaderCellDef class="border-b px-6 py-4 text-gray-800 bg-white odd:bg-yellow-50 even:bg-pink-50 hover:bg-orange-100 transition duration-300 font-semibold"> 
+  Duration (mins)
+</th>
+<td mat-cell *matCellDef="let row" class="border-b px-6 py-4 text-gray-800 bg-white odd:bg-yellow-50 even:bg-pink-50 hover:bg-orange-100 transition duration-300 font-semibold"> 
+  {{ row.duration }}
+</td>
+</ng-container>
+
+<tr mat-header-row *matHeaderRowDef="displayedColumns" class="rounded-t-lg"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;" class="transition duration-200"></tr>
+</table>
+
+
+<mat-paginator 
+  [length]="workoutList.data.length"
+  [pageSize]="5"  
+  [pageSizeOptions]="[5, 10, 20]"
+  class="mt-4 p-1 border border-yellow-300 rounded-2xl shadow-xl bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-bold text-center bg-opacity-80 text-sm font-serif tracking-wider">
+</mat-paginator>

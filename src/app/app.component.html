@@ -1,0 +1,34 @@
+<div class="container mx-auto px-4 py-6">
+  <!-- Header Section -->
+  <header class="bg-gradient-to-r from-blue-500 to-blue-700 text-white text-center py-4 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold tracking-wide">Health Challenge Tracker</h1>
+  </header><br>
+
+  <!-- Workout Entry Form -->
+  
+    <app-workout-entry (workoutAdded)="onWorkoutAdded($event)"></app-workout-entry>
+
+
+  <!-- Search Input -->
+  <div class="mt-4">
+    <input 
+      type="text" 
+      [(ngModel)]="searchText" 
+      (input)="applyFilter()" 
+      placeholder="Search workouts..." 
+      class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+    />
+  </div>
+
+  <!-- Workout List Section -->
+  <br>
+    <app-workout-list [workoutList]="workoutList"></app-workout-list>
+  
+
+  <button 
+    (click)="scrollToTop()"
+    class="fixed bottom-6 right-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2.5 shadow-lg focus:outline-none">
+    <i class="fas fa-arrow-up text-s text-black-500"></i>
+  </button>
+
+</div>

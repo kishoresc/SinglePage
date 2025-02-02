@@ -1,0 +1,49 @@
+<div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 max-w-4xl mx-auto flex items-end space-x-6">
+  <!-- Name Input -->
+  <div class="flex flex-col flex-1">
+    <label class="text-gray-700 font-semibold mb-1">Name:</label>
+    <input 
+      type="text" 
+      [(ngModel)]="newWorkout.name" 
+      placeholder="Enter your name"
+      class="h-10 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-full"
+    />
+  </div>
+
+  <!-- Exercise Dropdown -->
+  <div class="flex flex-col flex-1">
+    <label class="text-gray-700 font-semibold mb-1">Exercise:</label>
+    <select 
+      [(ngModel)]="newWorkout.exercise"
+      class="h-10 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all bg-white w-full"
+    >
+      <option value="Jumping">Jumping</option>
+      <option value="Jogging">Jogging</option>
+      <option value="Running">Running</option>
+      <option value="Cycling">Cycling</option>
+      <option value="Skipping">Skipping</option>
+      <option value="Swimming">Swimming</option>
+    </select>
+  </div>
+
+  <!-- Duration Input -->
+  <div class="flex flex-col flex-1">
+    <label class="text-gray-700 font-semibold mb-1">Duration (min):</label>
+    <input 
+      type="number" 
+      [(ngModel)]="newWorkout.duration" 
+      placeholder="Duration"
+      min="1" 
+      (keydown)="preventNegativeInput($event)"
+      class="h-10 px-4 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-full"
+    />
+  </div>
+
+  <!-- Submit Button -->
+  <button 
+    (click)="addWorkout()"
+    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-md transition-all shadow-md"
+  >
+    Add Workout
+  </button>
+</div>
