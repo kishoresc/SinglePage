@@ -22,6 +22,7 @@ export class AppComponent {
   displayedColumns: string[] = ['name', 'exercise', 'duration'];
   successMessage: string | null = null;
   searchText: string = '';  
+  warningMessage: string = "If you'd like to add another exercise for the same user, simply enter their name exactly as before. 😊";
 
   public selectedUser: string | null = null;
   
