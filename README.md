@@ -1,4 +1,4 @@
-# SinglePage
+# Health Challenge Tracker
 Single Page Website using Angular and Tailwind CSS
 Got it! Here’s your final **README.md** for a fully frontend Angular project:
 
