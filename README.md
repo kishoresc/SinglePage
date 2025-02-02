@@ -20,25 +20,13 @@ A simple Angular-based **Health Challenge Tracker** to log and manage workout ac
 - **Frontend**: Angular, Material-UI  
 - **State Management**: Local Storage (No Backend)  
 
-## Installation
+## Run the file
 
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-repo/health-challenge-tracker.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd health-challenge-tracker
-   ```
-3. Install dependencies:
-   ```sh
-   npm install
-   ```
-4. Run the project:
+1. Run the project:
    ```sh
    ng serve
    ```
-5. Open your browser and go to:
+2. Open your browser and go to:
    ```
    http://localhost:4200/
    ```
