@@ -3,6 +3,10 @@
 
 A simple Angular-based **Health Challenge Tracker** to log and manage workout activities.
 
+## Live Demo 🚀
+[Click here to view the deployed project](https://health-challenge-tracker-lake.vercel.app/)
+
+
 ## Features
 
 ✅ Add workout entries with name, exercise type, and duration  
